@@ -8,10 +8,19 @@ groovy PetitionGenerator.groovy [input file name] [count]
 where [input file name] contains a list of Chinese name, e.g.:
 
 陳鑑林
+
 梁家傑
+
 黃國健
+
 謝偉俊
+
 胡志偉
+
 黃毓民
+
 梁美芬
+
 蔣麗芸
+
+and [count] is the number of signature to generate
