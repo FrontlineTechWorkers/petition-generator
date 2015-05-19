@@ -1,5 +1,5 @@
 # petition-generator
-inspired by Robert Chow's pro-Beijing signature campaigns in Hong Kong that were caught on the camera showing some helpers each diligently emulating signatures for an imaginary supporter base, we come up with this productivity gainer for them.  If authenticity means nothing to them, why the fuss to sign manually?
+Inspired by Robert Chow's pro-Beijing signature campaigns in Hong Kong that were caught on the camera showing some helpers each diligently emulating signatures for an imaginary supporter base, we came up with this productivity gainer for them.  If authenticity means nothing to them, why bother to sign manually?
 
 ```sh
 groovy PetitionGenerator.groovy [input file name] [count]
