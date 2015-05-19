@@ -4,7 +4,7 @@ def options = cli.parse(args)
 def extraArguments = options.arguments()
 
 // it takes 2 input parameters, filename and count
-if (extraArguments == null || extraArguments.size() != 2) {
+if (!extraArguments || extraArguments.size() != 2) {
 	cli.usage()
 	return
 }
