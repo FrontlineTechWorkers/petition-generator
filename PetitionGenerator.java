@@ -10,6 +10,8 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 // Iterator
 import java.util.Iterator;
+// Name Generation
+import java.util.Random;
 
 public class PetitionGenerator {
   private Set<String> lastNames = new HashSet<String>();
@@ -92,7 +94,37 @@ public class PetitionGenerator {
   }
 
   public void generate() {
+    Random rand = new Random();
+    int length = randInt(rand, 2, 4);
+    String name = "";
+    String[] firstNamesArr = firstNames.toArray(new String[firstNames.size()]);
+    if (length == 4) {
+      String[] lastNamesArr = doubleLastNames.toArray(new String[doubleLastNames.size()]);
+      name += lastNamesArr[rand.nextInt(doubleLastNames.size())];
+      name += firstNamesArr[rand.nextInt(firstNames.size())];
+      name += firstNamesArr[rand.nextInt(firstNames.size())];
+    } else {
+      for (int i = 0; i < length; ++i) {
+        if (i == 0) {
+          String[] lastNamesArr = lastNames.toArray(new String[lastNames.size()]);
+          name += lastNamesArr[rand.nextInt(lastNames.size())];
+        } else {
+          name += firstNamesArr[rand.nextInt(firstNames.size())];
+        }
+      }
+    }
+    System.out.println(name);
+    name = "";
+  }
 
+  private static int randInt(Random rand, int min, int max) {
+    int randomNum = rand.nextInt((max - min) + 1) + min;
+    if (randomNum == max) {
+      if (!(rand.nextInt((max - min) + 1) + min == max)) {
+        randomNum = (min + max) / 2;
+      }
+    }
+    return randomNum;
   }
 
   public static void main(String[] args) {
