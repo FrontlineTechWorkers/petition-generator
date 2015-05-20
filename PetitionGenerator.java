@@ -98,6 +98,9 @@ public class PetitionGenerator {
   public void generate() {
     Random rand = new Random();
     int length = randInt(rand, 2, 4);
+    if (doubleLastNames.size() == 0) {
+      length  = 3;
+    }
     String name = "";
     String[] firstNamesArr = firstNames.toArray(new String[firstNames.size()]);
     if (length == 4) {
@@ -144,7 +147,13 @@ public class PetitionGenerator {
       System.out.println("Input must be a positive integer");
       return;
     }
-    PetitionGenerator pg = new PetitionGenerator();
+    PetitionGenerator pg;
+    if (args.length == 1) {
+      String fileName = args[0];
+      pg = new PetitionGenerator(fileName);
+    } else {
+      pg = new PetitionGenerator();
+    }
     for (int i = 0; i < number; ++i) {
       pg.generate();
     }

@@ -5,6 +5,15 @@ Inspired by Robert Chow's pro-Beijing signature campaigns in Hong Kong that were
 groovy PetitionGenerator.groovy [input file name] [count]
 ```
 
+JAVA
+
+```sh
+javac PetitionGenerator.java
+
+java PetitionGenerator [input file name]
+
+```
+
 where [input file name] contains a list of Chinese name, e.g.:
 
 陳鑑林
