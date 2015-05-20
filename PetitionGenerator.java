@@ -18,7 +18,6 @@ public class PetitionGenerator {
   private Set<String> doubleLastNames = new HashSet<String>();
   private Set<String> firstNames = new HashSet<String>();
   static private String defaultFile = "rawname.txt";
-  // set.toArray()[rand.nextInt(set.size())]
 
   public PetitionGenerator() {
     this(defaultFile);
@@ -75,6 +74,9 @@ public class PetitionGenerator {
     }
   }
 
+  /**
+   * A function for debugging, list out all the recorded name character
+   */
   public void list() {
     Iterator<String> iter = lastNames.iterator();
     while (iter.hasNext()) {
@@ -117,9 +119,14 @@ public class PetitionGenerator {
     name = "";
   }
 
+  /**
+   * Random an integer for the length of generated name
+   * Typically min is 2 and max is 4
+   */
   private static int randInt(Random rand, int min, int max) {
     int randomNum = rand.nextInt((max - min) + 1) + min;
     if (randomNum == max) {
+      // Reduce the chance of names with 4 words
       if (!(rand.nextInt((max - min) + 1) + min == max)) {
         randomNum = (min + max) / 2;
       }
@@ -138,9 +145,11 @@ public class PetitionGenerator {
       return;
     }
     PetitionGenerator pg = new PetitionGenerator();
-    //pg.list();
     for (int i = 0; i < number; ++i) {
       pg.generate();
     }
   }
 }
+
+// TODO: Double name only have 葉劉 for options
+// TODO: If input double name is 歐陽超, It will be recorded as single last name
