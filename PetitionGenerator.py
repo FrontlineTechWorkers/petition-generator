@@ -10,4 +10,5 @@ last, first = zip(*name_parts)
 last = ''.join(last)
 first = ''.join(first)
 for i in xrange(count):
-    print random.choice(last) + random.choice(first) + random.choice(first)
+    n = (random.choice(last) + random.choice(first) + random.choice(first))
+    print(n.encode('utf-8'))
