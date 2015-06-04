@@ -41,6 +41,11 @@ R
 Rscript PetitionGenerator.R [input file name] [count]
 ```
 
+Lisp (Racket)
+
+```sh
+racket PetitionGenerator.scm [input file name] [count]
+```
 
 where [input file name] contains a list of Chinese name, e.g.:
 
