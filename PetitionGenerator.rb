@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 # read input parameters, should have 2 input parameters, filename and count
-if ARGV.count < 2
+if ARGV.length < 2
   puts 'Usage: ./PetitionGenerator.rb [input file name] [count]'
   Process.exit(1)
 end
