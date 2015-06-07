@@ -2,6 +2,15 @@
 import Darwin
 import Foundation
 
+/**
+ * developed on XCode 6.3
+ * if you want to compile and run the binary version, issue the following command line:
+ *
+ * export SDKROOT=$(xcrun -show-sdk-path -sdk macosx)
+ * swiftc PetitionGenerator.swift
+ * ./PetitionGenerator
+ **/
+
 let arguments = Process.arguments
 
 /*
