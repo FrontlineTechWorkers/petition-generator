@@ -1,7 +1,8 @@
+#!/usr/bin/env scala
 import scala.io.Source
 object PetitionGenerator{
     def usage() {
-        Console.err.println("Usage: PetitionGenerator rawname.txt count")
+        Console.err.println("Usage: ./PetitionGenerator.scala rawname.txt count")
     }
 
     def main(args: Array[String]) {
